@@ -27,11 +27,18 @@ var cssFilesToInject = [
 var jsFilesToInject = [
 
   // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-  'assets/vendor/jquery/dist/jquery.js',
-  'assets/vendor/angular/angular.js',
-  'assets/vendor/angular-resource/angular-resource.js',
-  'assets/vendor/bootstrap/dist/js/bootstrap.js',
+	'/js/dependencies/sails.io.js',
+	'/vendor/jquery/dist/jquery.js',
+	'/vendor/angular/angular.js',
+	'/vendor/angular-resource/angular-resource.js',
+	'vendor/angular-ui-router/release/angular-ui-router.js',
+	'/vendor/bootstrap/dist/js/bootstrap.js',
+	
+	'/js/app.js',
+	'/js/controllers.js',
+	'/js/services.js',
+	'/js/directives.js',
+	'/js/filters.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
@@ -39,6 +46,7 @@ var jsFilesToInject = [
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js',
+  'js/*.js',
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'

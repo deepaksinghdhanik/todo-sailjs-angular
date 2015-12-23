@@ -7,6 +7,7 @@
 
 module.exports = {
 
+  identity:'Todo',
   schema:true,
   attributes: {
       title:{
@@ -23,7 +24,10 @@ module.exports = {
       },
       completed:{
             type:"boolean"
-      }
+      },
+	  File:{
+		  model:'File'
+	  }
    }
     
 };
