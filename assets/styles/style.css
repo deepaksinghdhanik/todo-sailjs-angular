@@ -1,0 +1,122 @@
+body{
+	background:#e1e1e1;
+}
+
+.mainNav {
+    box-shadow: 2px 2px 24px #ccc;
+}
+
+/*navbar-nav */
+.navbar-nav a i{
+	margin-right:10px;
+}
+
+.todoContainer{
+	max-width:600px;
+	/* border: 1px solid #ccc; */
+	/* padding: 5px; */
+	border-radius: 10px;
+}
+
+/* filterSection section */
+.filterSection{
+	
+}
+
+.filterSection form{
+	
+background: #45B5BB;
+	
+border-radius: 5px;
+	
+padding: 8px;
+	
+border: 1px solid #ccc;
+}
+
+/* todoList section */
+/* date */
+.todoList .dateSection{
+	
+padding-top: 5px;
+	
+padding-bottom: 5px;
+	
+text-align: center;
+	
+color: #fff;
+}
+.todoList .row-list{
+	
+background: #119085;
+	
+border-radius: 5px;
+	
+margin: 10px 0;
+}
+.todoList .dayG{
+	
+text-align: center;
+	
+font-size: 15px;
+}
+.todoList .dayG .day{
+	
+font-size: 31px;
+	
+text-align: center;
+	
+display: block;
+}
+span.day{
+	
+}.todoList .year{
+	
+}
+
+/* todoList detial*/
+.todoList  {
+	
+}
+.todoList .todoDetails {
+	
+background: #FFFFFF;
+	
+padding-top: 10px;
+	
+padding-bottom: 10px;
+	
+min-height: 95px;
+	
+padding-bottom: 32px;
+}
+.todoList .todoDetailSec {
+	
+}
+.todoList .todoDetailSec h3{
+	
+}
+.todoList .todoDetailSec footer{
+	
+position: absolute;
+	
+bottom: 0;
+	
+padding: 5px;
+}
+.todoList .todoDetailSec footer button,
+.todoList .todoDetailSec footer a{
+	
+padding: 2px 11px;
+	
+font-size: 12px;
+}
+.todoList .todoDetailSec footer button i,
+.todoList .todoDetailSec footer a i{
+	
+margin-right: 5px;
+}
+
+.submitBtn{
+	margin-top:10px;
+}

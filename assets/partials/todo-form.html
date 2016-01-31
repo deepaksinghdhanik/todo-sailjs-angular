@@ -1,0 +1,30 @@
+<form name="todo" novalidate>
+	<div class="input-group">
+	  <span class="input-group-addon" id="title"><i class="glyphicon glyphicon-tasks"></i></span>
+	  <input type="text" class="form-control" ng-model="single.title" placeholder="title" aria-describedby="title">
+	</div>
+	<div class="input-group">
+	  <span class="input-group-addon" id="description"><i class="glyphicon glyphicon-align-justify"></i></span>
+	  <textarea class="form-control" placeholder="Description" ng-model="single.description" aria-describedby="description"></textarea>
+	</div>
+	<div class="input-group">
+	  <span class="input-group-addon" id="title"><i class="glyphicon glyphicon-calendar"></i></span>
+	  <input type="date" class="form-control" ng-model="single.duedate" >
+	</div>
+
+	<div class="input-group">
+			<span class="input-group-addon" id="title"><i class="glyphicon glyphicon-apple"></i></span>
+			<select class="form-control">
+			  <option value="">Status</option>
+			  <option value="compelte">Compelte</option>
+			  <option value="review">Review</option>
+			  <option value="progress">Progress</option>
+			</select>
+	  </div>
+	  <div class="input-group submitBtn" ng-show="!edit">
+			<button class="btn btn-primary" ng-click="saveTodo(single)"> Create task</button>
+	  </div>
+	  <div class="input-group submitBtn" ng-show="edit">
+			<button class="btn btn-primary" ng-click="updateTodo(single)"> Update task</button>
+	  </div>
+</form>

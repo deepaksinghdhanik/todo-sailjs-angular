@@ -24,6 +24,8 @@
     "bootstrap": "~3.3.6",
     "angular": "~1.4.8",
     "angular-resource": "~1.4.8",
-    "angular-ui-router": "ui-router#~0.2.15"
+    "angular-ui-router": "ui-router#~0.2.15",
+    "bootstrap-css-only": "~3.3.6",
+    "angular-input-date": "~1.0.4"
   }
 }

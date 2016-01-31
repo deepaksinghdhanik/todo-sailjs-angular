@@ -16,7 +16,7 @@ var tmpPath = '.tmp/public/';
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
- 
+  '/vendor/bootstrap-css-only/css/bootstrap.css',
   'styles/**/*.css',
   'styles/style.css'
 ];
@@ -32,13 +32,8 @@ var jsFilesToInject = [
 	'/vendor/angular/angular.js',
 	'/vendor/angular-resource/angular-resource.js',
 	'vendor/angular-ui-router/release/angular-ui-router.js',
+	'vendor/angular-input-date/src/angular-input-date.js',
 	'/vendor/bootstrap/dist/js/bootstrap.js',
-	
-	'/js/app.js',
-	'/js/controllers.js',
-	'/js/services.js',
-	'/js/directives.js',
-	'/js/filters.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',

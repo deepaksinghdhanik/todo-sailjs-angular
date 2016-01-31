@@ -104,16 +104,16 @@ module.exports = {
         if (!id) {
             return res.badRequest('No id provided.');
         }
+		
+		Todo.update(id,criteria).exec(function afterwards(err, todo){
 
-        Todo.update(id, criteria, function(err, todo) {
+			 if (todo.length === 0) return res.notFound();
 
-            if (todo.length === 0) return res.notFound();
+			if (err) return next(err);
 
-            if (err) return next(err);
-
-            res.json(todo);
-
-        });
+			res.json(todo);
+			
+		});
 
     },
 
@@ -125,20 +125,18 @@ module.exports = {
         if (!id) {
             return res.badRequest('No id provided.');
         }
-
-        Todo.findOne(id).done(function(err, result) {
-            if (err) return res.serverError(err);
+		
+		Todo.findOne({id:id}).exec(function findOneCB(err, result){
+		  if (err) return res.serverError(err);
 
             if (!result) return res.notFound();
-
-            Todo.destroy(id, function(err) {
-
-                if (err) return next(err);
-
+			
+			Todo.destroy(id).exec(function deleteCB(err){
+				if (err) return next(err);
                 return res.json(result);
-            });
+			});
+		});
 
-        });
     },
 
 

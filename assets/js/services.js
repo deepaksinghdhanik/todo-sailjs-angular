@@ -1,15 +1,57 @@
-/**
- * Created by Sandeep on 01/06/14.
- */
+(function() {
+ 'use strict';
+ 
+  angular
+      .module('todoApp')
+      .factory('todoAPI', todoAPI);
 
-angular.module('movieApp.services',[]).factory('Movie',function($resource){
-    return $resource('http://localhost:1337/api/todo/:id',{id:'@_id'},{
-        update: {
-            method: 'PUT'
-        }
-    });
-}).service('popupService',function($window){
-    this.showPopup=function(message){
-        return $window.confirm(message);
-    }
-});
+	 function todoAPI($resource, $q) {
+		 
+		 var resourceApi = $resource('http://localhost:1337/api/todo/:id',{id:'@id'},{
+				update: {
+					method: 'PUT'
+				}
+			});
+			
+		  var todoFn = {
+			  queryTodo: queryTodo,
+			  getTodo:getTodo,
+			  saveTodo:resourceApi
+		  };
+		  
+		  return todoFn;
+		  
+		  function queryTodo() {
+			
+			var defer = $q.defer();
+			
+			resourceApi.query('', function(data){				
+				defer.resolve(data);				
+			}, function(error){				
+				defer.resolve(error);
+			});
+			
+			return defer.promise;
+			
+		  };
+		  
+		  function getTodo(id){
+			  
+			  var defer = $q.defer();			  
+			  resourceApi.get({
+				  id:id
+			  },function(data){
+				  defer.resolve(data);
+			  },function(error){
+				  defer.resolve(error);
+			  });
+			  
+			  return defer.promise;
+			  
+		  }
+
+	  }
+}()); 
+
+ 
+

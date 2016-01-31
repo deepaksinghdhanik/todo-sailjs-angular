@@ -9,25 +9,22 @@ module.exports = {
 
   identity:'Todo',
   schema:true,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
   attributes: {
       title:{
           type:"string",
           required:true
       },
       duedate:{
-          type:"date",
-          required:true
+          type:"datetime",
       },
       description:{
           type:"string",
-          required:true
       },
       completed:{
             type:"boolean"
-      },
-	  File:{
-		  model:'File'
-	  }
+      }
    }
     
 };

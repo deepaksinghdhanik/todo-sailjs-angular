@@ -1,0 +1,33 @@
+<div class="todoList" ng-repeat="tlist in todo.list">
+	<div class="row-list clearfix">
+		<div class="col-xs-2 dateSection">
+			<div class="dayG">
+				<span class="day">30 </span>
+				<span class="month">Jan</span>
+			</div>
+			<div class="year">2016</div>
+		</div>
+		<div class="col-xs-10 todoDetails">
+			<div class="todoDetailSec">
+				<h3 class="media-heading">{{tlist.title}}</h3>
+				<p>{{tlist.description}}</p>
+				
+				<footer>
+					<a type="button" class="btn btn-default edit" href="#/edit/{{tlist.id}}"><i class="glyphicon  glyphicon-edit"></i>edit</a>
+					<a type="button" class="btn btn-default edit" ng-click="deleteTodo(tlist)" ><i class="glyphicon  glyphicon-edit"></i>Delete</a>
+					<span class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						status
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="#">Compelte</a></li>
+						<li><a href="#">Review</a></li>
+						<li><a href="#">progress</a></li>
+					  </ul>
+					</span>
+				</footer>
+			</div>						 
+		</div>
+	</div>
+</div>
